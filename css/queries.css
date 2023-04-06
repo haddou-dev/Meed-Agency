@@ -1,0 +1,330 @@
+/**
+ * /*
+ *  rem and em do not depend onhtml font-size in media queries Instead, 1rem =1em =16px
+ *
+ * @format
+ */
+
+/******************************************************************/
+/***********(Bellow 1344px = 84em smaller desktops)*********/
+/**********************************************************************/
+
+@media (max-width: 84em) {
+  .future,
+  .hero {
+    max-width: 120rem;
+    padding: 4.8rem;
+  }
+
+  .heading-primary {
+    font-size: 4.4rem;
+  }
+  .gallery {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.6rem;
+  }
+  .section-meals {
+    padding: 9.6rem 3.2rem;
+  }
+}
+/******************************************************************/
+/*********** (Bellow 1200px = 75em Landscap Tablets)*********/
+/**********************************************************************/
+
+@media (max-width: 72em) {
+  html {
+    /*9px /16px*/
+    font-size: 56.25%;
+  }
+  .grid {
+    column-gap: 4.8rem;
+    row-gap: 6.4rem;
+  }
+  .heading-secondary {
+    font-size: 3.6rem;
+  }
+  .heading-tertiary {
+    font-size: 2.4rem;
+  }
+  .meal-content {
+    padding: 4.8rem 2.8rem 4.8rem 2.8rem;
+  }
+  .header {
+    padding: 0 3.2rem;
+  }
+  .hero {
+    gap: 4.8rem;
+  }
+  .future {
+    gap: 2.4rem;
+  }
+  .main-nav-list {
+    gap: 3.2rem;
+  }
+  .testimonials-container {
+    padding: 9.6rem 3.2rem;
+  }
+  .section-meals {
+    padding: 9.6rem 3.2rem;
+  }
+}
+/******************************************************************/
+/*********** (Bellow 940px = 59em Tablets)*********/
+/**********************************************************************/
+
+@media (max-width: 59em) {
+  html {
+    font-size: 50%;
+  }
+  .hero {
+    grid-template-columns: 1fr;
+    padding: 0 8rem;
+    gap: 6.4rem;
+  }
+  .future {
+    grid-template-columns: 1fr;
+    padding: 0 8rem;
+    gap: 6.4rem;
+  }
+  .future-descreption-box {
+    gap: 6.4rem;
+  }
+  .hero-text-box,
+  .future-text-box,
+  .hero-image-box {
+    text-align: center;
+  }
+  .hero-image {
+    width: 60%;
+  }
+  .delivered-meals {
+    justify-content: center;
+    margin-top: 3.2rem;
+  }
+  .logos img {
+    height: 2.4rem;
+  }
+  .step-number {
+    font-size: 7.4rem;
+  }
+  .meal-content {
+    padding: 4.8rem 2.8rem 4.8rem 2.8rem;
+  }
+  .section-testimonials {
+    grid-template-columns: 1fr;
+  }
+  .gallery {
+    grid-template-columns: repeat(6, 1fr);
+    gap: 1.6rem;
+  }
+  .cta {
+    grid-template-columns: 3fr 2fr;
+  }
+  .cta-form {
+    grid-template-columns: 1fr;
+  }
+  .btn--form {
+    margin-top: 1.2rem;
+    padding: 1.2rem;
+  }
+  /*************** Mobile Navegation ****************/
+  .btn-mobile-nav {
+    display: block;
+    z-index: 1000;
+  }
+  .btn-mobile-nav:focus {
+    border-radius: 3px;
+    outline: 4px solid rgba(230, 125, 34, 0.156);
+    outline-offset: 2px;
+  }
+  .nav-open .main-nav {
+    opacity: 1;
+    pointer-events: auto;
+    visibility: visible;
+    transform: translate(0);
+  }
+  .main-nav {
+    background-color: #ecedff23;
+    backdrop-filter: blur(10px);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    transform: translateX(100%);
+    display: flex;
+    /* flex-direction: column; */
+    align-items: center;
+    justify-content: center;
+    transition: all 0.5s ease-in;
+    /* Hide navigation */
+    /* Allows No transitions at all (No Animation)*/
+    /*display: none;*/
+    /* 1- hide it visually :*/
+    opacity: 0;
+    /* 2- Make it unaccessible tomouse and keyboard :*/
+    pointer-events: none;
+    /* 3- Hide it from screenreaders :*/
+    visibility: hidden;
+  }
+  .main-nav-list {
+    flex-direction: column;
+    gap: 4.8rem;
+  }
+  .main-nav-link:link,
+  .main-nav-link:visited {
+    font-size: 3rem;
+  }
+  .nav-open .icon-mobile-nav[name="close-outline"] {
+    display: block;
+  }
+  .nav-open .icon-mobile-nav[name="menu-outline"] {
+    display: none;
+  }
+  .pricing-plan {
+    width: 90%;
+  }
+}
+/******************************************************************/
+/*********** (Bellow 704px = 44em smaller Tablets)*********/
+/**********************************************************************/
+
+@media (max-width: 46em) {
+  .grid--3-cols,
+  .grid--4-cols {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .grid--2-cols {
+    grid-template-columns: 1fr;
+  }
+  .step-img-box:nth-child(2) {
+    grid-row: 1;
+  }
+  .step-img-box:nth-child(6) {
+    grid-row: 5;
+  }
+  .step-img-box {
+    transform: translateY(2.4rem);
+  }
+  /* .cta-img-box {
+      display: none;
+    } */
+  .cta-img-box {
+    background-image: linear-gradient(to right bottom, #1c1e6521, #23267e27),
+      url("../img/customers/contact_Us_mobile.jpg");
+  }
+  .cta-img-box {
+    height: 32rem;
+    background-position: center;
+    grid-row: 1;
+  }
+  .cta-text {
+    line-height: 1.4;
+  }
+  .cta {
+    grid-template-columns: 1fr;
+    /* background-image: url(../img/meals/meal-2.jpg); */
+  }
+  .diets {
+    grid-column: 1/-1;
+    justify-self: center;
+  }
+  .heading-secondary {
+    margin-bottom: 4.8rem;
+  }
+  .pricing-plan {
+    width: 100%;
+  }
+  .meal-content {
+    padding: 5.2rem 2.4rem 5.2rem 2.4rem;
+  }
+  .cta-text-box {
+    padding: 4.8rem 4.8rem 4.8rem 4.8rem;
+  }
+  .grid--footer {
+    grid-template-columns: repeat(6, 1fr);
+  }
+  .nav-col {
+    grid-row: 1;
+    grid-column: span 2;
+    margin-bottom: 3.2rem;
+  }
+  .address-col,
+  .logo-col {
+    grid-column: span 3;
+  }
+}
+/******************************************************************/
+/*********** (Bellow 544px = 34em smaller Tablets)*********/
+/**********************************************************************/
+
+@media (max-width: 34em) {
+  .grid {
+    row-gap: 4.8rem;
+  }
+  .grid--2-cols,
+  .grid--3-cols,
+  .grid--4-cols {
+    grid-template-columns: repeat(1, 1fr);
+  }
+  .heading-primary {
+    font-size: 2.8rem;
+  }
+  .heading-secondary-help {
+    font-size: 2.4rem;
+  }
+  
+  .main-nav-link:link,
+  .main-nav-link:visited {
+    font-size: 2rem;
+
+  }
+  .testimonials {
+    grid-template-columns: repeat(1, 1fr);
+  }
+  .section-hero {
+    padding: 2.4rem 0 4.8rem 0;
+  }
+  .section-How {
+    padding: 2rem;
+  }
+
+  .hero {
+    padding: 0 3.2rem;
+  }
+  .future-descreption-box {
+    gap: 3rem;
+    grid-template-columns: 1fr;
+  }
+  .hero-image-box {
+    width: 100%;
+  }
+  .logos img {
+    height: 1.2rem;
+  }
+  .btn,
+  .btn:link,
+  .btn:visited {
+    padding: 1.4rem 2rem;
+    font-weight: 400;
+    font-size: 1.8rem;
+  }
+
+  .footer-nav {
+    gap: 1.2rem;
+    line-height: 1.1;
+  }
+  .grid--footer {
+    row-gap: 2rem;
+    column-gap: 1.6rem;
+  }
+  .footer-logo {
+    margin-bottom: 2.4rem;
+  }
+  .footer-heading {
+    margin-bottom: 3.2rem;
+  }
+  .footer {
+    padding: 9.6rem 0;
+  }
+}
